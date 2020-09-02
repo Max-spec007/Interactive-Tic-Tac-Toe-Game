@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic Tac Toe Game!</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,76 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-    </body>
-</html>
+      <img class="img-responsive" src="./images/Tic-tac-toe.png" alt="Tic Tac Toe Logo">
+     <!-- <div class="center"> -->
+       <!-- <div class="header">Tic Toe Game!</div> -->
+       <div class="login-box">
+      <section>
+        <p id="message"></p>
+        <h1>Login Here!</h1>
+        <form id="sign-up-form">
+          <label for="sign-up-email">Email</label>
+          <input name="credentials[email]" type="email" placeholder="email">
+          <label for="sign-up-password">Password</label>
+          <input name="credentials[password]" type="password" placeholder="password">
+          <label for="password-confirmation">Password Confirmation</label>
+          <input name="credentials[password_confirmation]" type="password" placeholder="confirmation">
+          <input type="submit" value="Sign Up">
+       </form>
+     </section>
+      <section>
+        <form id="sign-in-form">
+         <label for="sign-in-email">Email</label>
+         <input name="credentials[email]" type="email" placeholder="email">
+         <label for="sign-in-password">Password</label>
+         <input name="credentials[password]" type="password" placeholder="password">
+         <input type="submit" value="Sign In">
+      </form>
+      </section>
+    <!-- </div> -->
+      <section>
+        <form id="sign-out-form">
+         <!-- <input name="credentials[email]" type="email" placeholder="email">
+         <input name="credentials[password]" type="password" placeholder="password"> -->
+         <input type="submit" value="Sign Out">
+      </form>
+      </section>
+    </div>
+      <section>
+      <form id="change-password">
+        <label for="change-password-old">Password</label>
+        <input name="passwords[old]" type="password" placeholder="old password">
+        <label for="change-password-new">Password</label>
+        <input name="passwords[new]" type="password" placeholder="new password">
+        <input type="submit" value="ChangePassword">
+      </form>
+    </section>
+
+    <!-- </div> -->
+    <div id='buttons'>
+      <button id="new-game" type="button">New Game</button>
+      <button id="game-history" type="button">Game History</button>
+      <!-- <button id="save-game" type="button">Save Game</button> -->
+    </div>
+      <section>
+          <div class="container">
+            <div class="row board">
+             <div class="col-4 box 0" id='0'></div>
+             <div class="col-4 box 1" id='1'></div>
+             <div class="col-4 box 2" id='2'></div>
+             <div class="col-4 box 3" id='3'></div>
+             <div class="col-4 box 4" id='4'></div>
+             <div class="col-4 box 5" id='5'></div>
+             <div class="col-4 box 6" id='6'></div>
+             <div class="col-4 box 7" id='7'></div>
+             <div class="col-4 box 8" id='8'></div>
+             </div>
+           </div>
+         <!-- </div class='container'>
+           <button id="new-game" type="button">Start Game</button>
+           <button id="game-history" type="button">Game History</button>
+           <button id="save-game" type="button">Save Game</button>
+          </div> -->
+        </section>
+     </body>
+    </html>

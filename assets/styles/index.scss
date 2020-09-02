@@ -1,1 +1,214 @@
 @import '~bootstrap/scss/bootstrap';
+
+.container {
+  // Set the board container to take up 100% of the viewport's height
+  // in this case that's the height of the browser
+  height: 100vh;
+  width: 100vh;
+  margin-top: 100px;
+}
+
+.row {
+  height: 25vh;
+  width: 25vh;
+}
+
+.board {
+  // set the max height and the min width of thte board
+  // 100vh - 100% of the viewport height
+  // use a method called `calc` to subtract some space around
+  // each side
+  max-height: calc(100vh - 100px);
+  min-width: calc(100vh - 100px);
+  // Setting margin to auto will make the left/right margins the same size
+  // which effectively centers the element.
+  margin-top: 100px;
+  // Add cat background to board:
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.box {
+  background: white;
+  // set the minimum height for each box to be a third of the parent's width
+  // (board's height)
+  // The calc method will take 100% of the parent's height and divide it by 3
+  min-height: calc(100% / 3);
+
+  // Set each box to have `display` be `flex` so we can center the content
+  // (x's and o's) inside of the boxes
+  display: flex;
+  // Center the content along the main-axis (left-to-right because flex-direction defaults to `row`)
+  justify-content: center;
+  // Center the content along the cross-axis (top-to-bottom because the cross-axis is perpendicular to the main-axis)
+  align-items: center;
+  // Use `vh` to have the font size change as the viewport height changes as well
+  font-size: 5vh;
+  // Add a shadow to the x's and o's
+  // Place the shadow 2px to the right & 2px below the text
+  // Set the shadow color to be black & have 25% opacity
+  text-shadow: 2px 2px rgba(0, 0, 0, .25);
+  // Prevent the user from being able to select the x or o text
+  user-select: none;
+  // we want to have boarders on the right of each box and the bottom of each box
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  // & in sass indicates a nested style. This would be the same as doing
+  // .box:nth-child(3n) in it's own separate block.
+  //
+  // Select the 3 right boxes using `:nth-child` - this will select elements
+  // based on their position to their siblings
+  // Pass `:nth-child()` the value `3n` which will select every 3rd box
+  // 3rd box, then 6th box, then the 9th box
+  // &:nth-child(3n) {
+    // border-right: none;
+
+
+  // Select the bottom boxes using `:nth-last-child` which selects elements
+  // based on their position **counting from the end**
+  // `-1 + 3` represent the last three elements among a group of siblings
+
+  // Break this down:
+  // when n is 0: (-1 * 0) + 3 = 3rd // third from last box
+  // when n is 1: (-1 * 1) + 2 = 2nd // second to last box
+  // when n is 2: (-1 * 2) + 1 = 1st // first to last (or just last) box
+  // Then we stop because there are no more elements
+  // &:nth-last-child(-1n + 3) {
+  //   border-bottom: 0px;
+  // }
+
+  // Add some color when we hover on a box:
+  &:hover {
+    background-color: #e3b732;
+    cursor: pointer;
+ }
+}
+
+// .header {
+//   display: flex;
+//   justify-content: center;
+//   font-size: 25px;
+// }
+
+.img-responsive {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  width: 185vh;
+}
+
+
+
+
+
+
+ body {
+  background: #5bb1d4;
+}
+//
+// .center form{
+//   position: relative;
+//   background: white;
+//   width: 100%;
+//   padding: 50px 10px 0 30px;
+//   box-sizing: border-box;
+//   border: 1px solid #e3b732;
+//   border-radius: 0 0 5px 5px;
+// }
+//
+// form input {
+//   height: 50px;
+//   width: 90%;
+//   padding: 0 10px;
+//   border-radius: 3px;
+//   border: 1px solid silver;
+//   font-size: 18px;
+//   outline: none;
+// }
+//
+// form input[type='password'] {
+//   margin-top: 20px;
+// }
+//
+form input[type='submit'] {
+  margin-top: 10px;
+  margin-bottom: -20px;
+  width: 100px;
+  height: 35px;
+  color: black;
+  cursor: pointer;
+  line-height: 20px;
+  border-radius: 35px;
+  background: #e3b732;
+}
+// //
+form input[type='submit']:hover {
+  background: white;
+  transition: 2s;
+}
+//
+// form a {
+//   text-decoration: none;
+//   font-size: 18px;
+//   color: black;
+//   padding: 0 0 0 20px;
+// }
+
+.login-box {
+  width: 520px;
+  height: 620px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 15px 10px;
+  margin-top: 200px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login-box input{
+  width: 100%;
+  margin-bottom: -200px;
+}
+
+// .login-box input[type="credentials"], input[type="password"]
+// {
+//   border: none;
+//   border-bottom: 1px solid #fff;
+//   background: transparent;
+//   outline: none;
+//   height: 40px;
+//   color: #fff
+//   font-size: 16px;
+// }
+
+.login-box input[type='submit'] {
+  border: none;
+  outline: none;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.login-box input[type='email'], input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 20px;
+  background: transparent;
+  outline: none;
+  outline: none;
+  height: 35px;
+  margin-top: 15px;
+  margin-bottom: -2px;
+  color: #fff;
+  font-size: 16px;
+}
