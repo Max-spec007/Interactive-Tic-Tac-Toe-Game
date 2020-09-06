@@ -9,8 +9,8 @@
 }
 
 .row {
-  height: 25vh;
-  width: 25vh;
+  height: 50vh;
+  width: 50vh;
 }
 
 .board {
@@ -97,7 +97,9 @@
   width: 185vh;
 }
 
+#message {
 
+}
 
 
 
@@ -154,6 +156,7 @@ form input[type='submit']:hover {
 //   padding: 0 0 0 20px;
 // }
 
+
 .login-box {
   width: 520px;
   height: 620px;
@@ -177,7 +180,7 @@ h1 {
 
 .login-box input{
   width: 100%;
-  margin-bottom: -200px;
+  margin-bottom: -250px;
 }
 
 // .login-box input[type="credentials"], input[type="password"]

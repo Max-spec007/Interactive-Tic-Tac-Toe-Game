@@ -2,6 +2,7 @@
 const getFormFields = require('./../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const store = require('./store')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -64,83 +65,70 @@ const onChangePassword = function (event) {
     .catch(ui.onChangePasswordFailure)
 }
 
-const onNewGame = function (event) {
-  event.preventDefault()
-  // get the form from the event
-  const form = event.target
-  // use getFormFields to get data from the form
-  const data = getFormFields(form)
-  // send data in AJAX request to the API
-  api.newGame(data)
-    // handle successul response
-    .then(ui.onNewGameSuccess)
-    // handle failed response
-    .catch(ui.oNewGameFailure)
-}
+// const onNewGame = function (event) {
+//   event.preventDefault()
+//   // get the form from the event
+//   const form = event.target
+//   // use getFormFields to get data from the form
+//   const data = getFormFields(form)
+//   // send data in AJAX request to the API
+//   api.newGame(data)
+//     // handle successul response
+//     .then(ui.onNewGameSuccess)
+//     // handle failed response
+//     .catch(ui.oNewGameFailure)
+// }
 
-let currentOption = 'x'
+// let currentOption = 'x'
+// const onSquaresClick = function (event) {
+//   // event.preventDefault()
+//   // // get the form from the event
+//   // const form = event.target
+//   // // use getFormFields to get data from the form
+//   // const data = getFormFields(form)
+//   // // send data in AJAX request to the API
+//   console.log('on click was clicked!')
+//   const data = event.target
+//   const checkSquares = $(data).text()
+//   if (checkSquares === '') {
+//     $(event.target).text(currentOption)
+//     currentOption === 'x' ? currentOption = 'o' : currentOption = 'x'
+//     console.log('It is blank!')
+//   } else {
+//     console.log('It is not blank')
+//   }
+// }
 
-const onClick = function (event) {
-  // event.preventDefault()
-  // // get the form from the event
-  // const form = event.target
-  // // use getFormFields to get data from the form
-  // const data = getFormFields(form)
-  // // send data in AJAX request to the API
-  console.log('on click was clicked!')
-  const data = event.target
-  const checkSquares = $(data).text()
-  if (checkSquares === '') {
-    $(event.target).text(currentOption)
-    currentOption === 'x' ? currentOption = 'o' : currentOption = 'x'
-    console.log('It is blank!')
-  } else {
-    console.log('It is not blank')
-  }
-  console.log(data)
-  console.log($(data).text())
-  // api.onClick(data, currentOption)
-  //   // handle successul response
-  //   .then(ui.onClickSuccess)
-  //   // handle failed response
-  //   .catch(ui.onClickFailure)
-}
+// const onGamesHistory = function (event) {
+//   event.preventDefault()
+//   // get the form from the event
+//   // send data in AJAX request to the API
+//   api.onGamesHistory(store.user.token)
+//   // handle successul response
+//     .then(ui.onGamesHistorySuccess)
+//   // handle failed response
+//     .catch(ui.onGamesHistoryFailure)
+// }
 
-const onCurrentOption = function (event) {
-  event.preventDefault()
-  // get the form from the event
-  const form = event.target
-  // use getFormFields to get data from the form
-  const data = getFormFields(form)
-  // send data in AJAX request to the API
-  api.onCurrentOption(data)
-  // handle successul response
-    .then(ui.onCurrentOptionSuccess)
-  // handle failed response
-    .catch(ui.onCurrentOptionFailure)
-}
-
-const onGameHistory = function () {
-  event.preventDefault()
-  // get the form from the event
-  // send data in AJAX request to the API
-  api.onGameHistory()
-  // handle successul response
-    .then(ui.onGameHistorySuccess)
-  // handle failed response
-    .catch(ui.onGameFailure)
-}
+// const onSaveGame = function () {
+//   event.preventDefault()
+//   // get the form from the event
+//   // send data in AJAX request to the API
+//   api.onSaveGame()
+//   // handle successul response
+//     .then(ui.onSaveGameSuccess)
+//   // handle failed response
+//     .catch(ui.onSaveGameFailure)
+// }
 
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
   onChangePassword,
-  onNewGame,
-  onClick,
-  onCurrentOption,
-  onGameHistory
+  store
+  // onNewGame,
+  // onSquaresClick,
+  // onGamesHistory
+  // onSaveGame
 }
-
-// let gameIsPlaying = true;
-// let xYourNext = true;

@@ -1,6 +1,7 @@
 
 const config = require('./config')
 const store = require('./store')
+const currentPlay = require('./currentPlay')
 
 const signUp = function (data) {
   return $.ajax({
@@ -51,7 +52,7 @@ const newGame = function (data) {
   })
 }
 
-const onGameHistory = function () {
+const gamesHistory = function () {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
@@ -61,11 +62,32 @@ const onGameHistory = function () {
   })
 }
 
+const onSquaresClick = function (data, playerValue, bool) {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game._id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: {
+      game: {
+        cell: {
+          index: data,
+          value: playerValue
+        },
+        over: bool
+      }
+    }
+  })
+}
+
 module.exports = {
-  signUp: signUp,
-  signIn: signIn,
-  signOut: signOut,
-  changePassword: changePassword,
-  newGame: newGame,
-  onGameHistory: onGameHistory
+  signUp,
+  signIn,
+  signOut,
+  changePassword,
+  newGame,
+  gamesHistory,
+  onSquaresClick,
+  currentPlay
 }
