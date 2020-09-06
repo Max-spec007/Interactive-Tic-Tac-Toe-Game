@@ -64,7 +64,7 @@ const gamesHistory = function () {
 
 const onSquaresClick = function (data, playerValue, bool) {
   return $.ajax({
-    url: config.apiUrl + '/games/' + store.game._id,
+    url: config.apiUrl + '/games/' + currentPlay.game._id,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token

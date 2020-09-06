@@ -4,14 +4,10 @@ const ui = require('./ui')
 const store = require('./store')
 const gamesBrain = require('./gamesBrain')
 
-let currentPlayer = 'x'
-let gamesOver = false
-let crossRoadBoard = ['', '', '', '', '', '', '', '', '']
-
 const onNewGame = function (token) {
   event.preventDefault()
   // get the form from the event
-  currentPlayer = 'x'
+  currentPlayer = 'X'
   gamesOver = false
   crossRoadBoard = ['', '', '', '', '', '', '', '', '']
 
@@ -23,37 +19,10 @@ const onNewGame = function (token) {
     .catch(ui.oNewGameFailure)
 }
 
-// const onSquaresClick = function (event) {
-//   const data = event.target
-//   console.log('on squaresclick was clicked!')
-//   // const data = event.target
-//   // if cross board game div is empty, game isn't over
-//   if ($('#' + data).is(':empty') && gamesOver === false) {
-//     // add playerValue to that div
-//     $('#' + data).html(currentPlayer)
-//     // update local gameBoard array
-//     updateCrossRoadBoard(data, currentPlayer)
-//     // check local gameboard for gameOver bool
-//     gamesOver = gamesBrain.isGameLoser(crossRoadBoard)
-//     // PATCH, call to the API with updates
-//     api.squaresClick(data, currentPlayer, gamesOver)
-//       .then(ui.onSquaresClickSuccess)
-//       .catch(ui.onSquaresClickFailure)
-//     const checkSquares = $(data).text()
-//     if (checkSquares === '') {
-//       $(event.target).text(currentPlayer)
-//       // update playerValue
-//       currentPlayer === 'x' ? currentPlayer = 'o' : currentPlayer = 'x'
-//     } else if (!$('#' + data).is(':empty') && gamesOver === false) {
-//       $('#msg').text('This crossroad is taken partner, take a different one.')
-//     }
-//     console.log('It is blank!')
-//     // } else {
-//     console.log('It is not blank')
-//   }
-//   console.log(data)
-//   console.log($(data).text())
-// }
+let currentPlayer = 'X'
+let gamesOver = false
+let crossRoadBoard = ['', '', '', '', '', '', '', '', '']
+
 const onSquaresClick = function (event) {
   // event.preventDefault()
   // // get the form from the event
@@ -66,12 +35,32 @@ const onSquaresClick = function (event) {
   const checkSquares = $(data).text()
   if (checkSquares === '') {
     $(event.target).text(currentPlayer)
-    currentPlayer === 'x' ? currentPlayer = 'o' : currentPlayer = 'x'
+    crossRoadBoard[event.target.id] = currentPlayer
+
     console.log('It is blank!')
+    console.log(crossRoadBoard)
+
+    if (gamesBrain.isGameWinner(crossRoadBoard)) {
+      console.log('game over!')
+      $('#message').text('GAME WINNER!!!!!!!!')
+
+      api.onSquaresClick(event.target.id, currentPlayer, true)
+    } else if (gamesBrain.tieGame(crossRoadBoard)) {
+      console.log('tie game!')
+      $('message').text('TIE GAME!!')
+      api.onSquaresClick(event.target.id, currentPlayer, true)
+    } else {
+      // keep playing the game
+      console.log(currentPlayer)
+      api.onSquaresClick(event.target.id, currentPlayer, false)
+    }
+    currentPlayer === 'X' ? currentPlayer = 'O' : currentPlayer = 'X'
+    $('#message').text('current player is ' + currentPlayer)
   } else {
     console.log('It is not blank')
   }
 }
+
 const onGamesHistory = function (event) {
   event.preventDefault()
   // get the form from the event
@@ -84,10 +73,6 @@ const onGamesHistory = function (event) {
     .catch(ui.onGamesHistoryFailure)
 }
 
-const updateCrossRoadBoard = function (index, string) {
-  crossRoadBoard.splice(index, 1, string)
-}
-
 module.exports = {
   currentPlayer,
   gamesOver,
@@ -95,6 +80,5 @@ module.exports = {
   onNewGame,
   onSquaresClick,
   onGamesHistory,
-  gamesBrain,
-  updateCrossRoadBoard
+  gamesBrain
 }

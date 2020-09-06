@@ -17,6 +17,7 @@ const onSignInSuccess = function (response) {
   $('#message').text('Thanks for signing in ' + response.user.email)
   $('#sign-in-form').trigger('reset')
   $('#change-password').show()
+  $('#history').show()
   // $('#sign-out-form').show()
   $('#sign-up-form').hide()
   $('#sign-in-form').hide()
@@ -65,8 +66,8 @@ const onNewGameSuccess = function (response) {
   currentPlay.game = response.game
   $('#crossRoadBoard').show()
   $('.box').empty()
-  $('#games-history').show()
-  $('#history').hide()
+  // $('#games-history').show()
+  $('#history').show()
   $('#change-password').hide()
   $('#message').text('A new game was created! ')
   console.log('Created new game!')
@@ -79,7 +80,7 @@ const onNewGameFailure = function (error) {
 }
 
 const onGamesHistorySuccess = function (response) {
-  $('#message').text('You have accessed the games history logs! ')
+  $('#message').text('number of games played ' + response.games.length)
   console.log('This is the games history!')
   console.log(response.games.length)
 }

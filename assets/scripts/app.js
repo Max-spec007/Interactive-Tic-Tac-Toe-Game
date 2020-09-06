@@ -19,7 +19,6 @@ $(() => {
   $('#change-password').on('submit', userEvents.onChangePassword)
   $('#new-game').on('click', gamesevents.onNewGame)
   $('#history').on('click', gamesevents.onGamesHistory)
-  $('#games-history').on('click', console.log('Hello'))
   // $('#save-game').on('click', userEvents.onSaveGame)
   $('.box').on('click', gamesevents.onSquaresClick)
 })
