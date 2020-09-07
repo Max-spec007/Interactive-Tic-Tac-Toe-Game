@@ -62,7 +62,7 @@ const gamesHistory = function () {
   })
 }
 
-const onSquaresClick = function (data, playerValue, bool) {
+const onSquaresClick = function (data, playerValue, gamesOver) {
   return $.ajax({
     url: config.apiUrl + '/games/' + currentPlay.game._id,
     method: 'PATCH',
@@ -75,7 +75,7 @@ const onSquaresClick = function (data, playerValue, bool) {
           index: data,
           value: playerValue
         },
-        over: bool
+        over: gamesOver
       }
     }
   })

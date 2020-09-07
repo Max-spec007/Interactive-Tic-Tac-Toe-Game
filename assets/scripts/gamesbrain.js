@@ -19,7 +19,7 @@ const tieGame = function (crossRoadBoard) {
     return false
   }
 }
-
+//
 const isGameWinner = function (crossRoadBoard) {
   if (crossRoadBoard[0] === crossRoadBoard[1] && crossRoadBoard[1] === crossRoadBoard[2] && crossRoadBoard[0] !== '') {
     return true

@@ -15,6 +15,7 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text('Thanks for signing in ' + response.user.email)
+  $('#message').text('Please click new game')
   $('#sign-in-form').trigger('reset')
   $('#change-password').show()
   $('#history').show()
@@ -24,6 +25,7 @@ const onSignInSuccess = function (response) {
   $('.container').show()
   $('#buttons').show()
   $('#sign-out-form').show()
+  $('#crossRoadBoard').hide()
   // api.getGetGame
   console.log('Here is my token!')
   console.log(response.user.token)
