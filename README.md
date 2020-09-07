@@ -36,7 +36,7 @@
   new game option.
 ## Image
 #### Wireframe
-![](project_1_wireframes/Mobile Device_TicTacToe Wireframe (Max) -1.jpg)
+![](https://media.git.generalassemb.ly/user/30432/files/8afb3200-e84f-11ea-8aa3-f9a012450609)
 #### User Stories
 - As, a user I want to be able to sign-up.
 - As a user, I want to be able to sign-in.
