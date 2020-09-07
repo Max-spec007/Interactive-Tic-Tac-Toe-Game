@@ -65,51 +65,6 @@ const onChangePassword = function (event) {
     .catch(ui.onChangePasswordFailure)
 }
 
-// const onNewGame = function (event) {
-//   event.preventDefault()
-//   // get the form from the event
-//   const form = event.target
-//   // use getFormFields to get data from the form
-//   const data = getFormFields(form)
-//   // send data in AJAX request to the API
-//   api.newGame(data)
-//     // handle successul response
-//     .then(ui.onNewGameSuccess)
-//     // handle failed response
-//     .catch(ui.oNewGameFailure)
-// }
-
-// let currentOption = 'x'
-// const onSquaresClick = function (event) {
-//   // event.preventDefault()
-//   // // get the form from the event
-//   // const form = event.target
-//   // // use getFormFields to get data from the form
-//   // const data = getFormFields(form)
-//   // // send data in AJAX request to the API
-//   console.log('on click was clicked!')
-//   const data = event.target
-//   const checkSquares = $(data).text()
-//   if (checkSquares === '') {
-//     $(event.target).text(currentOption)
-//     currentOption === 'x' ? currentOption = 'o' : currentOption = 'x'
-//     console.log('It is blank!')
-//   } else {
-//     console.log('It is not blank')
-//   }
-// }
-
-// const onGamesHistory = function (event) {
-//   event.preventDefault()
-//   // get the form from the event
-//   // send data in AJAX request to the API
-//   api.onGamesHistory(store.user.token)
-//   // handle successul response
-//     .then(ui.onGamesHistorySuccess)
-//   // handle failed response
-//     .catch(ui.onGamesHistoryFailure)
-// }
-
 // const onSaveGame = function () {
 //   event.preventDefault()
 //   // get the form from the event
@@ -127,8 +82,5 @@ module.exports = {
   onSignOut,
   onChangePassword,
   store
-  // onNewGame,
-  // onSquaresClick,
-  // onGamesHistory
   // onSaveGame
 }

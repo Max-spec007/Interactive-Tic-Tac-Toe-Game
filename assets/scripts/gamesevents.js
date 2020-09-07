@@ -24,15 +24,6 @@ let gamesOver = false
 let crossRoadBoard = ['', '', '', '', '', '', '', '', '']
 
 const onSquaresClick = function (event) {
-  // // if (gamesOver) {
-  //   return
-  // }
-  // event.preventDefault()
-  // // get the form from the event
-  // const form = event.target
-  // // use getFormFields to get data from the form
-  // const data = getFormFields(form)
-  // // send data in AJAX request to the API
   console.log('on click was clicked!')
   const data = event.target
   const checkSquares = $(data).text()
