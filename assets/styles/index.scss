@@ -84,25 +84,12 @@
  }
 }
 
-// .header {
-//   display: flex;
-//   justify-content: center;
-//   font-size: 25px;
-// }
-
 .img-responsive {
   display: flex;
   justify-content: center;
   height: 90vh;
   width: 185vh;
 }
-
-#message {
-
-}
-
-
-
 
  body {
   background: #5bb1d4;
@@ -132,31 +119,6 @@
 //   margin-top: 20px;
 // }
 //
-form input[type='submit'] {
-  margin-top: 10px;
-  margin-bottom: -20px;
-  width: 100px;
-  height: 35px;
-  color: black;
-  cursor: pointer;
-  line-height: 20px;
-  border-radius: 35px;
-  background: #e3b732;
-}
-// //
-form input[type='submit']:hover {
-  background: white;
-  transition: 2s;
-}
-//
-// form a {
-//   text-decoration: none;
-//   font-size: 18px;
-//   color: black;
-//   padding: 0 0 0 20px;
-// }
-
-
 .login-box {
   width: 520px;
   height: 620px;
@@ -171,6 +133,33 @@ form input[type='submit']:hover {
   margin-top: 200px;
 }
 
+form input[type='submit'] {
+  margin-bottom: -20px;
+  width: 100px;
+  color: black;
+  cursor: pointer;
+  line-height: 20px;
+  background: #e3b732;
+  border: none;
+  outline: none;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+// //
+form input[type='submit']:hover {
+  background: white;
+  transition: 2s;
+}
+//
+// form a {
+//   text-decoration: none;
+//   font-size: 18px;
+//   color: black;
+//   padding: 0 0 0 20px;
+// }
+
 h1 {
   margin: 0;
   padding: 0 0 20px;
@@ -183,25 +172,6 @@ h1 {
   margin-bottom: -250px;
 }
 
-// .login-box input[type="credentials"], input[type="password"]
-// {
-//   border: none;
-//   border-bottom: 1px solid #fff;
-//   background: transparent;
-//   outline: none;
-//   height: 40px;
-//   color: #fff
-//   font-size: 16px;
-// }
-
-.login-box input[type='submit'] {
-  border: none;
-  outline: none;
-  height: 40px;
-  font-size: 18px;
-  border-radius: 20px;
-}
-
 .login-box input[type='email'], input[type="password"] {
   border: none;
   border-bottom: 1px solid #fff;
@@ -211,7 +181,7 @@ h1 {
   outline: none;
   height: 35px;
   margin-top: 15px;
-  margin-bottom: -2px;
+  // margin-bottom: -2px;
   color: #fff;
   font-size: 16px;
 }

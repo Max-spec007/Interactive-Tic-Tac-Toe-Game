@@ -13,6 +13,7 @@ $(() => {
   $('#buttons').hide()
   $('#change-password').hide()
   $('#sign-out-form').hide()
+  $('#my-logout').hide()
   $('#sign-up-form').on('submit', userEvents.onSignUp)
   $('#sign-in-form').on('submit', userEvents.onSignIn)
   $('#sign-out-form').on('submit', userEvents.onSignOut)

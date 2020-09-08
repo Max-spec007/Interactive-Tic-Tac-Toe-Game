@@ -2,7 +2,7 @@
   This is a tic tac toe game that will bring you to the edge of your seat!
   With this interactive tic tac toe game, you will challenge yourself to be the
   best tic tac toer in town. This game is not only for fun, but a great way to
-  strecth the mind. Come play this fun interactive, mind-strecthing game with
+  stretch the mind. Come play this fun interactive, mind-stretching game with
   family and friends of all ages and sizes. Come one or come all, but most
   importantly, Welcome to the Crossroads!
 ## Rules
