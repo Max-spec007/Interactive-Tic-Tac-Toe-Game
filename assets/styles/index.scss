@@ -3,29 +3,17 @@
 .container {
   // Set the board container to take up 100% of the viewport's height
   // in this case that's the height of the browser
-  height: 100vh;
-  // max-height: 1500px;
-  // max-width: 1500px;
-  // margin-bottom: 200px;
   display: flex;
+  height: 100vh;
   justify-content: center;
   width: 100vh;
-  // align-self: center;
-  // margin-bottom: 500px;
-  // margin-top: 100px;
 }
-
-// .flex-container {
-//   display: flex;
-//   flex-flow: column wrap;
-//   justify-content: center;
-// }
 
 .row {
   height: 50vh;
   width: 50vh;
 }
-//
+
 .board {
   // set the max height and the min width of the board
   // 100vh - 100% of the viewport height
@@ -107,40 +95,14 @@
 .img-responsive {
   display: flex;
   margin: 0 auto;
-  // justify-content: center;
   height: 90vh;
   width: 210vh;
-  // width: 185vh;
 }
 
  body {
   background: #5bb1d4;
 }
-//
-// .center form{
-//   position: relative;
-//   background: white;
-//   width: 100%;
-//   padding: 50px 10px 0 30px;
-//   box-sizing: border-box;
-//   border: 1px solid #e3b732;
-//   border-radius: 0 0 5px 5px;
-// }
-//
-// form input {
-//   height: 50px;
-//   width: 90%;
-//   padding: 0 10px;
-//   border-radius: 3px;
-//   border: 1px solid silver;
-//   font-size: 18px;
-//   outline: none;
-// }
-//
-// form input[type='password'] {
-//   margin-top: 20px;
-// }
-//
+
 .login-box {
   background: rgba(0, 0, 0, 0.5);
   width: 520px;
@@ -169,18 +131,11 @@ form input[type='submit'] {
   border-radius: 20px;
   margin-top: 20px;
 }
-// //
+
 form input[type='submit']:hover {
   background: white;
   transition: 2s;
 }
-//
-// form a {
-//   text-decoration: none;
-//   font-size: 18px;
-//   color: black;
-//   padding: 0 0 0 20px;
-// }
 
 h1 {
   margin: 0;
@@ -203,7 +158,6 @@ h1 {
   outline: none;
   height: 35px;
   margin-top: 15px;
-  // margin-bottom: -2px;
   color: #fff;
   font-size: 16px;
 }

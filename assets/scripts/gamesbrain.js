@@ -1,17 +1,5 @@
 'use strict'
 
-// const isGameLoser = function (crossRoadBoard) {
-//   // is winning conditions were present, game is over
-//   if (isGameWinner(crossRoadBoard) === true) {
-//     return true
-//     // If no winner, but the game board if full it's a tie -- still over
-//   } else if (isGameWinner(crossRoadBoard) === false && crossRoadBoard.filter(x => x === '').length === 0) {
-//     return true
-//   } else {
-//     return false
-//   }
-// }
-
 const tieGame = function (crossRoadBoard) {
   if (isGameWinner(crossRoadBoard) === false && crossRoadBoard.filter(x => x === '').length === 0) {
     return true
@@ -41,17 +29,6 @@ const isGameWinner = function (crossRoadBoard) {
     return false
   }
 }
-
-// const isGameWinner = [
-//   [0, 1, 2],
-//   [3, 4, 5],
-//   [6, 7, 8],
-//   [0, 3, 6],
-//   [1, 4, 7],
-//   [2, 5, 8],
-//   [0, 4, 8],
-//   [2, 4, 6]
-// ]
 
 module.exports = {
   isGameWinner,

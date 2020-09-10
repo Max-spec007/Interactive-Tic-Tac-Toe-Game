@@ -7,12 +7,11 @@ const store = require('./store')
 const onSignUp = function (event) {
   event.preventDefault()
   // get the form from the events
-  console.log('eventObjectIs ', event)
+
   const form = event.target
   // Use getFormFields to get data from the form
   const data = getFormFields(form)
 
-  console.log('data is ', data)
   // send data in AjAX request to the API
   api.signUp(data)
   // handle successful response
@@ -25,7 +24,7 @@ const onSignIn = function (event) {
   event.preventDefault()
   // get the form from the event
   const form = event.target
-  console.log(event.target)
+
   // use getFormFields to get data from the form
   const data = getFormFields(form)
   // send data in AJAX request to the API
@@ -40,7 +39,7 @@ const onSignOut = function (event) {
   event.preventDefault()
   // get the form from the event
   const form = event.target
-  console.log(event.target)
+
   // use getFormFields to get data from the form
   const data = getFormFields(form)
   // send data in AJAX request to the API
@@ -64,17 +63,6 @@ const onChangePassword = function (event) {
     // handle failed response
     .catch(ui.onChangePasswordFailure)
 }
-
-// const onSaveGame = function () {
-//   event.preventDefault()
-//   // get the form from the event
-//   // send data in AJAX request to the API
-//   api.onSaveGame()
-//   // handle successul response
-//     .then(ui.onSaveGameSuccess)
-//   // handle failed response
-//     .catch(ui.onSaveGameFailure)
-// }
 
 module.exports = {
   onSignUp,
