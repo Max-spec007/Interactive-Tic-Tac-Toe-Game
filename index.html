@@ -15,6 +15,7 @@
       <img class="img-responsive" src="./images/Tic-tac-toe.png" alt="Tic Tac Toe Logo">
      <!-- <div class="center"> -->
        <!-- <div class="header">Tic Toe Game!</div> -->
+       <div class="flex-container">
        <div class="login-box">
           <section>
               <p id="message"></p>
@@ -57,15 +58,19 @@
               <input name="passwords[old]" type="password" placeholder="old password">
               <label for="change-password-new">Password</label>
               <input name="passwords[new]" type="password" placeholder="new password">
-              <input type="submit" value="ChangePassword">
+              <input type="submit" value="Change Password">
             </form>
           </section>
-      </div>
+          <div id='buttons'>
+           <button id="new-game" type="button">New Game</button>
+           <button id="history" type="button">Game History</button>
+         </div>
+          </div>
 
-      <div id='buttons'>
+       <!-- <div id='buttons'>
         <button id="new-game" type="button">New Game</button>
         <button id="history" type="button">Game History</button>
-      </div>
+      </div> -->
 
       <!-- <p id='history'></p> -->
       <!-- <button id="save-game" type="button">Save Game</button> -->
@@ -84,9 +89,11 @@
              <div class="col-4 box" id='8'></div>
              </div>
            </div>
+
          <!-- </div class='container'>
            <button id="save-game" type="button">Save Game</button>
           </div> -->
         </section>
+      </div>
      </body>
     </html>

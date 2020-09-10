@@ -4,17 +4,30 @@
   // Set the board container to take up 100% of the viewport's height
   // in this case that's the height of the browser
   height: 100vh;
+  // max-height: 1500px;
+  // max-width: 1500px;
+  // margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
   width: 100vh;
-  margin-top: 100px;
+  // align-self: center;
+  // margin-bottom: 500px;
+  // margin-top: 100px;
 }
+
+// .flex-container {
+//   display: flex;
+//   flex-flow: column wrap;
+//   justify-content: center;
+// }
 
 .row {
   height: 50vh;
   width: 50vh;
 }
-
+//
 .board {
-  // set the max height and the min width of thte board
+  // set the max height and the min width of the board
   // 100vh - 100% of the viewport height
   // use a method called `calc` to subtract some space around
   // each side
@@ -22,7 +35,8 @@
   min-width: calc(100vh - 100px);
   // Setting margin to auto will make the left/right margins the same size
   // which effectively centers the element.
-  margin-top: 100px;
+  // margin-top: 100px;
+  // margin-bottom: 1500px;
   // Add cat background to board:
   background: no-repeat center center;
   background-size: cover;
@@ -84,11 +98,19 @@
  }
 }
 
+#buttons {
+  margin-top: 20px;
+  margin-left: 145px;
+}
+
+
 .img-responsive {
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  // justify-content: center;
   height: 90vh;
-  width: 185vh;
+  width: 210vh;
+  // width: 185vh;
 }
 
  body {
@@ -135,7 +157,7 @@
 
 form input[type='submit'] {
   margin-bottom: -20px;
-  width: 100px;
+  width: 160px;
   color: black;
   cursor: pointer;
   line-height: 20px;
