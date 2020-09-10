@@ -78,9 +78,8 @@ const onNewGameSuccess = function (response) {
   $('#my-logout').show()
 }
 
-const onNewGameFailure = function (error) {
+const onNewGameFailure = function () {
   $('#message').text('Game was not created ')
-  console.log('error is ' + error)
   $('#my-login').hide()
   $('#my-logout').show()
 }
@@ -92,11 +91,10 @@ const onGamesHistorySuccess = function (response) {
   console.log(response.games.length)
 }
 
-const onGamesHistoryFailure = function (error) {
+const onGamesHistoryFailure = function () {
   $('#message').text('Failed to load games history ')
   $('#my-login').hide()
   $('#my-logout').show()
-  console.log('error is ' + error)
 }
 
 module.exports = {
