@@ -32,7 +32,12 @@ const onSquaresClick = function (event) {
 
     gamesOver = gamesBrain.isGameWinner(crossRoadBoard)
     if (gamesOver) {
-      $('#message').text('GAME WINNER!!!!!!!!')
+      if (crossRoadBoard.join('').length % 2 === 0) {
+        store.winner = 'O'
+      } else {
+        store.winner = 'X'
+      }
+      $('#message').text(`GAME WINNER!!!!!\n${store.winner} WON!`)
 
       api.onSquaresClick(event.target.id, currentPlayer, gamesOver)
     } else if (gamesBrain.tieGame(crossRoadBoard)) {
@@ -44,6 +49,7 @@ const onSquaresClick = function (event) {
       api.onSquaresClick(event.target.id, currentPlayer, gamesOver)
       currentPlayer === 'X' ? currentPlayer = 'O' : currentPlayer = 'X'
       $('#message').text('Current player is ' + currentPlayer)
+      // $('#message').text(`${winner} WON!`)
     }
   }
 }

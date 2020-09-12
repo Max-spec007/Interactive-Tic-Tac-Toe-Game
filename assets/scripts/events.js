@@ -70,5 +70,4 @@ module.exports = {
   onSignOut,
   onChangePassword,
   store
-  // onSaveGame
 }

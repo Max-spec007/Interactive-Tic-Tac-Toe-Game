@@ -19,8 +19,8 @@
   // 100vh - 100% of the viewport height
   // use a method called `calc` to subtract some space around
   // each side
-  max-height: calc(100vh - 100px);
-  min-width: calc(100vh - 100px);
+  max-height: calc(150vh - 150px);
+  min-width: calc(150vh - 150px);
   // Setting margin to auto will make the left/right margins the same size
   // which effectively centers the element.
   // margin-top: 100px;
@@ -35,7 +35,7 @@
   // set the minimum height for each box to be a third of the parent's width
   // (board's height)
   // The calc method will take 100% of the parent's height and divide it by 3
-  min-height: calc(100% / 3);
+  min-height: calc(150% / 3);
 
   // Set each box to have `display` be `flex` so we can center the content
   // (x's and o's) inside of the boxes
@@ -108,6 +108,7 @@
   width: 520px;
   height: 620px;
   color: #fff;
+  // color: black;
   top: 50%;
   left: 50%;
   position: relative;
@@ -120,7 +121,6 @@
 form input[type='submit'] {
   margin-bottom: -20px;
   width: 160px;
-  color: black;
   cursor: pointer;
   line-height: 20px;
   background: #e3b732;
@@ -153,11 +153,11 @@ h1 {
   border: none;
   border-bottom: 1px solid #fff;
   border-radius: 20px;
-  background: transparent;
+  background: white;
   outline: none;
   outline: none;
-  height: 35px;
+  height: 25px;
   margin-top: 15px;
-  color: #fff;
+  color: black;
   font-size: 16px;
 }

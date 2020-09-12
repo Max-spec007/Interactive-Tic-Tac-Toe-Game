@@ -76,6 +76,7 @@ const onNewGameSuccess = function (response) {
   $('#message').text('A new game was created! Please scroll down to play game! ')
   $('#my-login').hide()
   $('#my-logout').show()
+  store.winner = ''
 }
 
 const onNewGameFailure = function () {
@@ -85,7 +86,7 @@ const onNewGameFailure = function () {
 }
 
 const onGamesHistorySuccess = function (response) {
-  $('#message').text('number of games played ' + response.games.length)
+  $('#message').text('Number of games played: ' + response.games.length)
   $('#my-login').hide()
   $('#my-logout').show()
   console.log(response.games.length)
